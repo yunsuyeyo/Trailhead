@@ -1,8 +1,6 @@
-/**
- * Created by i2max-YunsuSong on 2022-07-06.
- */
 
-import {LightningElement} from 'lwc';
+import {LightningElement, wire} from 'lwc';
+import queryAccountsByRevenue from '@salesforce/apex/AccountListControllerLwc.queryAccountsByRevenue';
 
 export default class AccountFinder extends LightningElement {
     annualRevenue = null;
@@ -12,4 +10,7 @@ export default class AccountFinder extends LightningElement {
     reset(){
         this.annualRevenue = null;
     }
+
+    @wire(queryAccountsByRevenue, {annualRevenue:'$annualRevenue'})
+    accounts;
 }
