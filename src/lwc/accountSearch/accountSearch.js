@@ -2,9 +2,8 @@
  * Created by i2max-YunsuSong on 2022-07-06.
  */
 
-import {LightningElement, wire} from 'lwc';
+import { LightningElement, wire } from 'lwc';
 import queryAccountsByEmployeeNumber from '@salesforce/apex/AccountListControllerLwc.queryAccountsByEmployeeNumber';
-
 export default class AccountSearch extends LightningElement {
     numberOfEmployees = null;
     handleChange(event){
