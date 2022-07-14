@@ -4,4 +4,9 @@
 
 <!-- Account Creator -->
 <template>
+    <lightning-record-form
+        object-api-name={objectApiName}
+        fields={fields}
+        onsuccess={handleSuccess}>
+    </lightning-record-form>
 </template>
